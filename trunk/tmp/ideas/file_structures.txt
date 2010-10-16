@@ -1,0 +1,45 @@
+quickstart
+|-- application
+|   |-- Bootstrap.php
+|   |-- configs
+|   |   `-- application.ini
+|   |-- controllers
+|   |   |-- ErrorController.php
+|   |   `-- IndexController.php
+|   |-- models
+|   `-- views
+|       |-- helpers
+|       `-- scripts
+|           |-- error
+|           |   `-- error.phtml
+|           `-- index
+|               `-- index.phtml
+|-- library
+|-- public
+|   |-- .htaccess
+|   `-- index.php
+`-- tests
+    |-- application
+    |   `-- bootstrap.php
+    |-- library
+    |   `-- bootstrap.php
+    `-- phpunit.xml
+	
+
+
+app/
+	config/
+	controllers/
+	models/
+	plugins/
+	tmp/
+	vendors/
+	views/
+	webroot/
+cake/
+	config/
+	docs/
+	libs/
+vendors/
+
+
