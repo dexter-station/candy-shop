@@ -1,0 +1,61 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US">
+    <head>
+        <title><?php
+if (isset($title)) {
+    echo $title;
+} else {
+    echo(APP_NAME);
+}
+?></title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <meta name="description" content="<?php
+            if (isset($description)) {
+                echo $description;
+            } else {
+                echo APP_DESCRIPTION;
+            }
+?>" />
+        <meta name="keywords" content="<?php
+              if (isset($keywords)) {
+                  echo $keywords;
+              } else {
+                  echo APP_KEYWORDS;
+              }
+?>" />
+        <meta name="author" content="<?php
+              if (isset($author)) {
+                  echo $author;
+              } else {
+                  echo APP_AUTHOR;
+              }
+?>" />
+        <style type="text/css"><?php
+              if (isset($stylesheet)) {
+                  if (file_exists($stylesheet)) {
+                      require $stylesheet;
+                  }
+              } else {
+                  if (file_exists(APP_STYLESHEET)) {
+                      require APP_STYLESHEET;
+                  }
+              }
+?></style>
+    </head>
+    <body>
+        <div id="main_wrapper">
+
+        </div>
+        <script type="text/javascript"><?php
+              if (isset($javascript)) {
+                  if (file_exists($javascript)) {
+                      require $javascript;
+                  }
+              } else {
+                  if (file_exists(APP_JAVASCRIPT)) {
+                      require APP_JAVASCRIPT;
+                  }
+              }
+?></script>
+    </body>
+</html>

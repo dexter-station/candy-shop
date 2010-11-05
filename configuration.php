@@ -33,6 +33,17 @@ define('DB_DATABASE', 'shop');
 define('DB_DSN', DB_ADAPTER . ':' . 'host=' . DB_SERVER . ';' . 'dbname=' . DB_DATABASE);
 
 /*
+ * * Other configuration
+ */
+
+define('APP_NAME', 'shop');
+define('APP_DESCRIPTION', 'A online shop for all kind of products');
+define('APP_KEYWORDS', 'shop, platform, meta, products, other');
+define('APP_AUTHOR', 'Shop Platform');
+define('APP_STYLESHEET', WEB_DIR . 'styles/default/style.css');
+define('APP_JAVASCRIPT', WEB_DIR . 'js/script.js');
+
+/*
  * * Developement configuration
  */
 
