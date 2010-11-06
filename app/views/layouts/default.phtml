@@ -1,5 +1,5 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US">
+<html dir="ltr" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US">
     <head>
         <title><?php
 if (isset($title)) {
@@ -23,39 +23,348 @@ if (isset($title)) {
                   echo APP_KEYWORDS;
               }
 ?>" />
-        <meta name="author" content="<?php
-              if (isset($author)) {
-                  echo $author;
-              } else {
-                  echo APP_AUTHOR;
-              }
-?>" />
-        <style type="text/css"><?php
-              if (isset($stylesheet)) {
-                  if (file_exists($stylesheet)) {
-                      require $stylesheet;
-                  }
-              } else {
-                  if (file_exists(APP_STYLESHEET)) {
-                      require APP_STYLESHEET;
-                  }
-              }
-?></style>
+        <meta name="author" content="Vilherbal"/>
+
+        <link rel="icon" type="image/gif" href="styles/default/images/cart_icon.gif"/>
+        <link rel="stylesheet" type="text/css" href="styles/default/style.css" />
     </head>
     <body>
-        <div id="main_wrapper">
-
+        <div id="mainWrapper">
+            <div id="headerWrapper">
+                <img id="logoImage" src="styles/default/images/logo.jpg" alt="Company Logo"/>
+                <div id="countryControl">
+                    <ul>
+                        <li><strong>Pays</strong>:</li>
+                        <li><a href="#"><img src="styles/default/images/flags/uk.gif" alt=""/></a></li>
+                        <li><a href="#"><img src="styles/default/images/flags/ro.gif" alt=""/></a></li>
+                        <li><a href="#"><img src="styles/default/images/flags/bg.gif" alt=""/></a></li>
+                        <li><a href="#"><img src="styles/default/images/flags/us.gif" alt=""/></a></li>
+                    </ul>
+                </div>
+                <div class="clearBoth"></div>
+                <div id="menuBar">
+                    <ul>
+                        <li><a href="./">Accueil</a></li>
+                        <li><a href="./">Nouveautes</a></li>
+                        <li><a href="./">Meilleures Ventes</a></li>
+                        <li><a href="./">Menu item</a></li>
+                    </ul>
+                </div>
+                <div class="clearBoth"></div>
+                <hr/>
+            </div>
+            <div class="clearBoth"></div>
+            <div id="contentWrapper">
+                <div id="leftSideBar">
+                    <div class="sideBox">
+                        <h1 class="boxHead">Categories</h1>
+                        <div class="boxContent">
+                            <ul class="categories">
+                                <li><a href="./">Vetements</a></li>
+                                <li><a href="./">Voitures</a></li>
+                                <li><a href="./">Ordinateurs<strong>&nbsp;&gt;</strong></a></li>
+                                <li><a href="./">Claviers</a></li>
+                                <li><a href="./">Ecrans</a></li>
+                                <li><a href="./">Articles</a></li>
+                                <li><a href="./">Nimporte</a></li>
+                                <li><a href="./">Rien</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="sideBox">
+                        <h1 class="boxHead">Voir Aussi</h1>
+                        <div class="boxContent">
+                            <div class="articleSideCatalog">
+                                <a href="./"><img class="productSmallImage" src="styles/default/images/small_product.jpg" alt=""/></a>
+                                <div class="productSideDetails">
+                                    <a href="./">
+                                        <h1 class="productMediumPrice">Price: <span class="productPriceValue">623&euro;</span></h1>
+                                        <h1 class="productMediumName">Jackette hiver</h1>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="articleSideCatalog">
+                                <a href="./"><img class="productSmallImage" src="styles/default/images/small_product.jpg" alt=""/></a>
+                                <div class="productSideDetails">
+                                    <a href="./">
+                                        <h1 class="productMediumPrice">Price: <span class="productPriceValue">623&euro;</span></h1>
+                                        <h1 class="productMediumName">Jackette hiver</h1>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="articleSideCatalog">
+                                <a href="./"><img class="productSmallImage" src="styles/default/images/small_product.jpg" alt=""/></a>
+                                <div class="productSideDetails">
+                                    <a href="./">
+                                        <h1 class="productMediumPrice">Price: <span class="productPriceValue">623&euro;</span></h1>
+                                        <h1 class="productMediumName">Jackette hiver</h1>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="articleSideCatalog">
+                                <a href="./"><img class="productSmallImage" src="styles/default/images/small_product.jpg" alt=""/></a>
+                                <div class="productSideDetails">
+                                    <a href="./">
+                                        <h1 class="productMediumPrice">Price: <span class="productPriceValue">623&euro;</span></h1>
+                                        <h1 class="productMediumName">Jackette hiver</h1>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="articleSideCatalog">
+                                <a href="./"><img class="productSmallImage" src="styles/default/images/small_product.jpg" alt=""/></a>
+                                <div class="productSideDetails">
+                                    <a href="./">
+                                        <h1 class="productMediumPrice">Price: <span class="productPriceValue">623&euro;</span></h1>
+                                        <h1 class="productMediumName">Jackette hiver</h1>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="articleSideCatalog">
+                                <a href="./"><img class="productSmallImage" src="styles/default/images/small_product.jpg" alt=""/></a>
+                                <div class="productSideDetails">
+                                    <a href="./">
+                                        <h1 class="productMediumPrice">Price: <span class="productPriceValue">623&euro;</span></h1>
+                                        <h1 class="productMediumName">Jackette hiver</h1>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="articleSideCatalog">
+                                <a href="./"><img class="productSmallImage" src="styles/default/images/small_product.jpg" alt=""/></a>
+                                <div class="productSideDetails">
+                                    <a href="./">
+                                        <h1 class="productMediumPrice">Price: <span class="productPriceValue">623&euro;</span></h1>
+                                        <h1 class="productMediumName">Jackette hiver</h1>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="sideBox">
+                        <h1 class="boxHead">Meilleures Ventes</h1>
+                        <div class="boxContent">
+                            <div class="articleTopCatalog">
+                                <a href="./"><img class="productTopImage" src="styles/default/images/top_product.jpg" alt=""/></a>
+                                <div class="productTopDetails">
+                                    <a href="./">
+                                        <h1 class="productMediumPrice">Price: <span class="productPriceValue">623&euro;</span></h1>
+                                        <h1 class="productMediumName">Jackette hiver</h1>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="articleTopCatalog">
+                                <a href="./"><img class="productTopImage" src="styles/default/images/top_product.jpg" alt=""/></a>
+                                <div class="productTopDetails">
+                                    <a href="./">
+                                        <h1 class="productMediumPrice">Price: <span class="productPriceValue">623&euro;</span></h1>
+                                        <h1 class="productMediumName">Jackette hiver</h1>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="articleTopCatalog">
+                                <a href="./"><img class="productTopImage" src="styles/default/images/top_product.jpg" alt=""/></a>
+                                <div class="productTopDetails">
+                                    <a href="./">
+                                        <h1 class="productMediumPrice">Price: <span class="productPriceValue">623&euro;</span></h1>
+                                        <h1 class="productMediumName">Jackette hiver</h1>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="articleTopCatalog">
+                                <a href="./"><img class="productTopImage" src="styles/default/images/top_product.jpg" alt=""/></a>
+                                <div class="productTopDetails">
+                                    <a href="./">
+                                        <h1 class="productMediumPrice">Price: <span class="productPriceValue">623&euro;</span></h1>
+                                        <h1 class="productMediumName">Jackette hiver</h1>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="content">
+                    <div class="contentBox">
+                        <h1 class="contentBoxHeadText">Nouveautes</h1>
+                        <div class="contentBoxContent">
+                            <div class="articleCatalog">
+                                <a href="./">
+                                    <img class="productMediumImage" src="styles/default/images/medium_product.jpg" alt=""/>
+                                    <h1 class="productMediumPrice">Price: <span class="productPriceValue">623&euro;</span></h1>
+                                    <h1 class="productMediumName">Jackette hiver</h1>
+                                </a>
+                            </div>
+                            <div class="articleCatalog">
+                                <a href="./">
+                                    <img class="productMediumImage" src="styles/default/images/medium_product.jpg" alt=""/>
+                                    <h1 class="productMediumPrice">Price: <span class="productPriceValue">623&euro;</span></h1>
+                                    <h1 class="productMediumName">Jackette hiver</h1>
+                                </a>
+                            </div>
+                            <div class="articleCatalog">
+                                <a href="./">
+                                    <img class="productMediumImage" src="styles/default/images/medium_product.jpg" alt=""/>
+                                    <h1 class="productMediumPrice">Price: <span class="productPriceValue">623&euro;</span></h1>
+                                    <h1 class="productMediumName">Jackette hiver</h1>
+                                </a>
+                            </div>
+                            <div class="articleCatalog">
+                                <a href="./">
+                                    <img class="productMediumImage" src="styles/default/images/medium_product.jpg" alt=""/>
+                                    <h1 class="productMediumPrice">Price: <span class="productPriceValue">623&euro;</span></h1>
+                                    <h1 class="productMediumName">Jackette hiver</h1>
+                                </a>
+                            </div>
+                            <div class="articleCatalog">
+                                <a href="./">
+                                    <img class="productMediumImage" src="styles/default/images/medium_product.jpg" alt=""/>
+                                    <h1 class="productMediumPrice">Price: <span class="productPriceValue">623&euro;</span></h1>
+                                    <h1 class="productMediumName">Jackette hiver</h1>
+                                </a>
+                            </div>
+                            <div class="articleCatalog">
+                                <a href="./">
+                                    <img class="productMediumImage" src="styles/default/images/medium_product.jpg" alt=""/>
+                                    <h1 class="productMediumPrice">Price: <span class="productPriceValue">623&euro;</span></h1>
+                                    <h1 class="productMediumName">Jackette hiver</h1>
+                                </a>
+                            </div>
+                            <div class="articleCatalog">
+                                <a href="./">
+                                    <img class="productMediumImage" src="styles/default/images/medium_product.jpg" alt=""/>
+                                    <h1 class="productMediumPrice">Price: <span class="productPriceValue">623&euro;</span></h1>
+                                    <h1 class="productMediumName">Jackette hiver</h1>
+                                </a>
+                            </div>
+                            <div class="articleCatalog">
+                                <a href="./">
+                                    <img class="productMediumImage" src="styles/default/images/medium_product.jpg" alt=""/>
+                                    <h1 class="productMediumPrice">Price: <span class="productPriceValue">623&euro;</span></h1>
+                                    <h1 class="productMediumName">Jackette hiver</h1>
+                                </a>
+                            </div>
+                            <div class="clearBoth"></div>
+                        </div>
+                    </div>
+                    <div class="contentBox">
+                        <h1 class="contentBoxHeadText">Vetements</h1>
+                        <div class="contentBoxContent">
+                            <div class="articleCatalog">
+                                <a href="./">
+                                    <img class="productMediumImage" src="styles/default/images/medium_product.jpg" alt=""/>
+                                    <h1 class="productMediumPrice">Price: <span class="productPriceValue">623&euro;</span></h1>
+                                    <h1 class="productMediumName">Jackette hiver</h1>
+                                </a>
+                            </div>
+                            <div class="articleCatalog">
+                                <a href="./">
+                                    <img class="productMediumImage" src="styles/default/images/medium_product.jpg" alt=""/>
+                                    <h1 class="productMediumPrice">Price: <span class="productPriceValue">623&euro;</span></h1>
+                                    <h1 class="productMediumName">Jackette hiver</h1>
+                                </a>
+                            </div>
+                            <div class="articleCatalog">
+                                <a href="./">
+                                    <img class="productMediumImage" src="styles/default/images/medium_product.jpg" alt=""/>
+                                    <h1 class="productMediumPrice">Price: <span class="productPriceValue">623&euro;</span></h1>
+                                    <h1 class="productMediumName">Jackette hiver</h1>
+                                </a>
+                            </div>
+                            <div class="articleCatalog">
+                                <a href="./">
+                                    <img class="productMediumImage" src="styles/default/images/medium_product.jpg" alt=""/>
+                                    <h1 class="productMediumPrice">Price: <span class="productPriceValue">623&euro;</span></h1>
+                                    <h1 class="productMediumName">Jackette hiver</h1>
+                                </a>
+                            </div>
+                            <div class="articleCatalog">
+                                <a href="./">
+                                    <img class="productMediumImage" src="styles/default/images/medium_product.jpg" alt=""/>
+                                    <h1 class="productMediumPrice">Price: <span class="productPriceValue">623&euro;</span></h1>
+                                    <h1 class="productMediumName">Jackette hiver</h1>
+                                </a>
+                            </div>
+                            <div class="articleCatalog">
+                                <a href="./">
+                                    <img class="productMediumImage" src="styles/default/images/medium_product.jpg" alt=""/>
+                                    <h1 class="productMediumPrice">Price: <span class="productPriceValue">623&euro;</span></h1>
+                                    <h1 class="productMediumName">Jackette hiver</h1>
+                                </a>
+                            </div>
+                            <div class="articleCatalog">
+                                <a href="./">
+                                    <img class="productMediumImage" src="styles/default/images/medium_product.jpg" alt=""/>
+                                    <h1 class="productMediumPrice">Price: <span class="productPriceValue">623&euro;</span></h1>
+                                    <h1 class="productMediumName">Jackette hiver</h1>
+                                </a>
+                            </div>
+                            <div class="articleCatalog">
+                                <a href="./">
+                                    <img class="productMediumImage" src="styles/default/images/medium_product.jpg" alt=""/>
+                                    <h1 class="productMediumPrice">Price: <span class="productPriceValue">623&euro;</span></h1>
+                                    <h1 class="productMediumName">Jackette hiver</h1>
+                                </a>
+                            </div>
+                            <div class="articleCatalog">
+                                <a href="./">
+                                    <img class="productMediumImage" src="styles/default/images/medium_product.jpg" alt=""/>
+                                    <h1 class="productMediumPrice">Price: <span class="productPriceValue">623&euro;</span></h1>
+                                    <h1 class="productMediumName">Jackette hiver</h1>
+                                </a>
+                            </div>
+                            <div class="articleCatalog">
+                                <a href="./">
+                                    <img class="productMediumImage" src="styles/default/images/medium_product.jpg" alt=""/>
+                                    <h1 class="productMediumPrice">Price: <span class="productPriceValue">623&euro;</span></h1>
+                                    <h1 class="productMediumName">Jackette hiver</h1>
+                                </a>
+                            </div>
+                            <div class="clearBoth"></div>
+                        </div>
+                    </div>
+                </div>
+                <div id="rightSideBar">
+                    <div class="sideBox">
+                        <h1 class="boxHead">Liens Magasin</h1>
+                        <div class="boxContent">
+                            <ul>
+                                <li><a href="#"><img src="styles/default/images/cart_icon.gif" alt="Panier"/></a><a href="#">Mon panier</a></li>
+                                <li><a href="?controller=users&amp;action=login">Se conecter</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="sideBox">
+                        <h1 class="boxHead">Recherche</h1>
+                        <div class="boxContent">
+                            <form action="./" method="get">
+                                <div>
+                                    <input type="text" value=""/>
+                                    <input type="image" src="styles/default/images/search_button.jpg" value="Recherche"/>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="sideBox">
+                        <h1 class="boxHead">Convertisseur</h1>
+                        <div class="boxContent">
+                            <select>
+                                <option>Euro</option>
+                                <option>Pounds</option>
+                                <option>US Dollar</option>
+                                <option>CA Dollar</option>
+                                <option>AU Dollar</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="clearBoth"><hr/></div>
+            <div id="footerWrapper">
+                <p>
+                    Copyright&copy; Vilherbal &amp;Co. Corporation All Rights Reserved.<br/>
+                    Use of this service constitutes your acceptance of the Vilherbal &amp;Co. Corporation's privacy policy.<br/>
+                    Store powered by Epitech
+                </p>
+            </div>
         </div>
-        <script type="text/javascript"><?php
-              if (isset($javascript)) {
-                  if (file_exists($javascript)) {
-                      require $javascript;
-                  }
-              } else {
-                  if (file_exists(APP_JAVASCRIPT)) {
-                      require APP_JAVASCRIPT;
-                  }
-              }
-?></script>
+        <script type="text/javascript" src="js/script.js"></script>
     </body>
 </html>

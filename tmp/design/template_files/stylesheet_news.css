@@ -1,0 +1,129 @@
+.newsHeadlineText {
+	PADDING-RIGHT: 10px; PADDING-LEFT: 10px; FONT-SIZE: 0.9em; PADDING-BOTTOM: 3px; WIDTH: 100%; PADDING-TOP: 3px; BORDER-BOTTOM: #ff9900 1px solid; HEIGHT: 15px; TEXT-ALIGN: left
+}
+.newsHeadlineText IMG {
+	VERTICAL-ALIGN: middle
+}
+.newsHeader {
+	FONT-SIZE: 14px; BACKGROUND: #333; HEIGHT: 30px; TEXT-ALIGN: center
+}
+.newsHeader H1 {
+	BACKGROUND: none transparent scroll repeat 0% 0%; COLOR: #ffffcc
+}
+P.articleHeading {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; FONT-WEIGHT: bold; PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-TOP: 0px
+}
+SPAN.articleHeading {
+	FONT-WEIGHT: bold
+}
+P.articleByLine {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 20px; FONT-SIZE: 0.9em; PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-TOP: 0px
+}
+P.articleByLine SPAN.author {
+	FONT-STYLE: normal
+}
+P.articleByLine SPAN.comments {
+	FONT-STYLE: italic
+}
+P.articleByLine A {
+	TEXT-DECORATION: underline
+}
+DIV.articleTextBlock {
+	CLEAR: both; PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-TOP: 0px
+}
+DIV.articleText {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-TOP: 0px
+}
+P.articleText {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-TOP: 0px
+}
+IMG.articleImage {
+	BORDER-RIGHT: #9a9a9a 3px double; PADDING-RIGHT: 0px; BORDER-TOP: #9a9a9a 3px double; PADDING-LEFT: 0px; BACKGROUND: #333; PADDING-BOTTOM: 0px; MARGIN: 10px; BORDER-LEFT: #9a9a9a 3px double; PADDING-TOP: 0px; BORDER-BOTTOM: #9a9a9a 3px double
+}
+P.newsListingDate {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; FONT-WEIGHT: bold; PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-TOP: 0px; TEXT-ALIGN: center
+}
+UL.articleLinkList {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; MARGIN: 0px; LINE-HEIGHT: 1.5em; PADDING-TOP: 10px; LIST-STYLE-TYPE: none
+}
+UL.archiveLinkList {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; MARGIN: 0px; LINE-HEIGHT: 1.5em; PADDING-TOP: 0px; LIST-STYLE-TYPE: none
+}
+UL.articleLinkList LI {
+	PADDING-RIGHT: 0px; BACKGROUND-POSITION: 17px 2px; PADDING-LEFT: 35px; BACKGROUND-IMAGE: url("../images/icons/news_link.gif"/*tpa=http://www.ghdsb.com/includes/templates/ghd/images/icons/news_link.gif*/); PADDING-BOTTOM: 0px; PADDING-TOP: 0px; BACKGROUND-REPEAT: no-repeat
+}
+UL.archiveLinkList LI {
+	PADDING-RIGHT: 0px; BACKGROUND-POSITION: 17px 2px; PADDING-LEFT: 35px; BACKGROUND-IMAGE: url("../images/icons/news_link.gif"/*tpa=http://www.ghdsb.com/includes/templates/ghd/images/icons/news_link.gif*/); PADDING-BOTTOM: 0px; PADDING-TOP: 0px; BACKGROUND-REPEAT: no-repeat
+}
+UL.articleLinkList LI.articleStoreLink {
+	PADDING-RIGHT: 0px; BACKGROUND-POSITION: 17px 4px; PADDING-LEFT: 35px; BACKGROUND-IMAGE: url("../images/icons/news_link_2.gif"/*tpa=http://www.ghdsb.com/includes/templates/ghd/images/icons/news_link_2.gif*/); PADDING-BOTTOM: 0px; PADDING-TOP: 0px; BACKGROUND-REPEAT: no-repeat
+}
+UL.articleLinkList LI.articleProductLink {
+	PADDING-RIGHT: 0px; BACKGROUND-POSITION: 17px 0px; PADDING-LEFT: 35px; BACKGROUND-IMAGE: url("../images/icons/cart.gif"/*tpa=http://www.ghdsb.com/includes/templates/ghd/images/icons/cart.gif*/); PADDING-BOTTOM: 0px; PADDING-TOP: 0px; BACKGROUND-REPEAT: no-repeat
+}
+UL.articleLinkList A {
+	TEXT-DECORATION: underline
+}
+UL.archiveLinkList A {
+	TEXT-DECORATION: underline
+}
+.commentsHeading {
+	PADDING-RIGHT: 3px; PADDING-LEFT: 3px; BACKGROUND: #666666; PADDING-BOTTOM: 3px; PADDING-TOP: 3px
+}
+.commentsBody {
+	PADDING-RIGHT: 3px; PADDING-LEFT: 3px; BACKGROUND: #333; PADDING-BOTTOM: 3px; PADDING-TOP: 3px
+}
+P.backLink {
+	CLEAR: right; PADDING-RIGHT: 0px; PADDING-LEFT: 0px; FLOAT: right; PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-TOP: 0px
+}
+.commentsAuthor {
+	FLOAT: left; MARGIN: 0px; WIDTH: 45%; TEXT-ALIGN: left
+}
+.commentsSubject {
+	FONT-WEIGHT: bold
+}
+.commentsDate {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; FLOAT: right; PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-TOP: 0px; TEXT-ALIGN: right
+}
+DIV.commentsBody P {
+	CLEAR: both; PADDING-RIGHT: 10px; PADDING-LEFT: 10px; PADDING-BOTTOM: 10px; MARGIN: 0px; PADDING-TOP: 0px
+}
+FIELDSET.commentsFieldSet {
+	PADDING-RIGHT: 1em; PADDING-LEFT: 1em; BACKGROUND: #333; PADDING-BOTTOM: 1em; MARGIN: 10px 0px 0px; PADDING-TOP: 1em; TEXT-ALIGN: left
+}
+FIELDSET.commentsFieldSet LEGEND {
+	PADDING-RIGHT: 0.5em; PADDING-LEFT: 0.5em; BACKGROUND: #333; PADDING-BOTTOM: 0.2em; COLOR: #ffcc00; PADDING-TOP: 0.2em; TEXT-ALIGN: right
+}
+FIELDSET.commentsFieldSet LABEL {
+	DISPLAY: block; MARGIN: 3px; TEXT-ALIGN: left
+}
+FIELDSET.commentsFieldSet LABEL INPUT {
+	DISPLAY: block
+}
+.commentsSubmit {
+	TEXT-ALIGN: right
+}
+.splitSolid {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; BACKGROUND: #000000; PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-TOP: 0px; HEIGHT: 1px
+}
+.splitSolidGray {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; BACKGROUND: #333; PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-TOP: 0px; HEIGHT: 1px
+}
+.clearSplit {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-TOP: 0px; HEIGHT: 10px
+}
+.splitSolid HR {
+	DISPLAY: none
+}
+.splitSolidGray HR {
+	DISPLAY: none
+}
+.clearSplit HR {
+	DISPLAY: none
+}
+.clearboth {
+	CLEAR: both; WIDTH: 100%; HEIGHT: 1px
+}
+.clearboth HR {
+	DISPLAY: none
+}

@@ -1,0 +1,57 @@
+.cssButton {
+	BORDER-RIGHT: #333 1px solid; PADDING-RIGHT: 1px; BORDER-TOP: #ff9933 1px solid; PADDING-LEFT: 1px; FONT-SIZE: 12px; BACKGROUND: #97530a; PADDING-BOTTOM: 1px; MARGIN: 0px; BORDER-LEFT: #ff9933 1px solid; COLOR: #ffffcc; PADDING-TOP: 1px; BORDER-BOTTOM: #333 1px solid; FONT-FAMILY: Arial, Helvetica, sans-serif
+}
+.cssButtonHover {
+	BORDER-RIGHT: #eee 1px solid; PADDING-RIGHT: 1px; BORDER-TOP: #eee 1px solid; PADDING-LEFT: 1px; FONT-SIZE: 12px; BACKGROUND: #333; PADDING-BOTTOM: 1px; MARGIN: 0px; BORDER-LEFT: #eee 1px solid; CURSOR: pointer; COLOR: #ffffcc; PADDING-TOP: 1px; BORDER-BOTTOM: #eee 1px solid; FONT-FAMILY: Arial, Helvetica, sans-serif; TEXT-DECORATION: none
+}
+.small_delete {
+	WIDTH: 7em
+}
+.button_prev {
+	WIDTH: 7em
+}
+.button_next {
+	WIDTH: 7em
+}
+.button_search {
+	WIDTH: 7em
+}
+.button_sold_out_sm {
+	WIDTH: 10em
+}
+.button_sold_out {
+	WIDTH: 10em
+}
+.button_update_cart {
+	WIDTH: 10em
+}
+.button_checkout {
+	WIDTH: 10em
+}
+.button_login {
+	WIDTH: 10em
+}
+.button_return_to_product_list {
+	WIDTH: 22em
+}
+.button_add_selected {
+	WIDTH: 22em
+}
+.button_in_cart {
+	WIDTH: 19em
+}
+.button_submit {
+	WIDTH: 18em
+}
+.button_update_cart {
+	COLOR: #ffffcc
+}
+.button_update_cartHover {
+	COLOR: #ffffcc
+}
+.button_buy_now {
+	MARGIN-LEFT: 20px
+}
+.listingBuyNowButton {
+	MARGIN-LEFT: 20px; VERTICAL-ALIGN: middle
+}

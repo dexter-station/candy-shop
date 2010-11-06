@@ -18,7 +18,7 @@ class Dispatcher {
          */
         $this->controller = $controller;
         $this->action = $action;
-        $this->file = APP_DIR . getPath('controllers/' . $this->controller . 'Controller.php');
+        $this->file = APP_DIR . 'controllers/' . $this->controller . 'Controller.php';
         $this->class = ucfirst($this->controller) . 'Controller';
     }
 
@@ -48,9 +48,9 @@ class Dispatcher {
         /*
          * * Loads default controller
          */
-        require_once APP_DIR . getPath('controllers/indexController.php');
+        require_once APP_DIR . 'controllers/indexController.php';
         $controller = new IndexController();
         $controller->index();
     }
-
+    
 }

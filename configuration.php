@@ -4,21 +4,8 @@
  * * Paths configuration
  */
 
-define('APP_DIR', realpath(dirname(__FILE__))
-        . DIRECTORY_SEPARATOR
-        . 'app'
-        . DIRECTORY_SEPARATOR
-);
-define('TMP_DIR', realpath(dirname(__FILE__))
-        . DIRECTORY_SEPARATOR
-        . 'tmp'
-        . DIRECTORY_SEPARATOR
-);
-define('WEB_DIR', realpath(dirname(__FILE__))
-        . DIRECTORY_SEPARATOR
-        . 'web'
-        . DIRECTORY_SEPARATOR
-);
+define('APP_DIR', realpath(dirname(__FILE__)) . '/app/');
+define('TMP_DIR', realpath(dirname(dirname(__FILE__))) . '/tmp/');
 
 /*
  * * Database configuration 
@@ -40,9 +27,6 @@ define('APP_NAME', 'shop');
 define('APP_DESCRIPTION', 'A online shop for all kind of products');
 define('APP_KEYWORDS', 'shop, platform, meta, products, other');
 define('APP_AUTHOR', 'Shop Platform');
-define('APP_STYLESHEET', WEB_DIR . 'styles/default/style.css');
-define('APP_JAVASCRIPT', WEB_DIR . 'js/script.js');
-
 /*
  * * Developement configuration
  */

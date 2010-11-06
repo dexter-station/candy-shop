@@ -1,26 +1,18 @@
 <?php
 
-class Initializator {
+class Application {
+
+    static $dbConnection;
 
     function __construct() {
-        self::loadPathFunctions();
-        self::stripSlashesForUserInputs();
         self::setErrorReporting();
+        self::stripSlashesForUserInputs();
         self::startSession();
-        self::startDispatcher();
+        self::databaseConnect();
+        self::autoStartDispatcher();
     }
 
-    static private function loadPathFunctions() {
-        /*
-         * * Loads paths functions[replacing '/' with '\' for windows for example]
-         */
-        require APP_DIR
-                . 'libs'
-                . DIRECTORY_SEPARATOR
-                . 'pathFunctions.php';
-    }
-
-    private function stripSlashesForUserInputs() {
+    private static function stripSlashesForUserInputs() {
         /*
          * * Strips slashes if the methods are secure
          */
@@ -38,7 +30,7 @@ class Initializator {
         }
     }
 
-    static private function setErrorReporting() {
+    private static function setErrorReporting() {
         /*
          * * $level defines level of error reporting
          */
@@ -56,18 +48,23 @@ class Initializator {
         error_reporting(constant($level));
     }
 
-    static private function startSession() {
+    private static function startSession() {
         /*
          * * Sends headers for setting session
          */
         session_start();
     }
 
-    static private function startDispatcher() {
+    private static function databaseConnect() {
+        require_once APP_DIR . 'classes/dbAdapter.php';
+        self::$dbConnection = new dbAdapter();
+    }
+
+    private static function autoStartDispatcher() {
         /*
          * * Starts dispatcher
          */
-        require_once APP_DIR . getPath('classes/dispatcherClass.php');
+        require_once APP_DIR . 'classes/dispatcherClass.php';
         if (isset($_GET['controller']) && isset($_GET['action'])) {
             $dispatcher = new Dispatcher($_GET['controller'], $_GET['action']);
         } else {
