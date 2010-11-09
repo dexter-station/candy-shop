@@ -17,6 +17,7 @@ define('DB_SERVER', 'localhost');
 define('DB_USERNAME', 'root');
 define('DB_PASSWORD', 'test');
 define('DB_DATABASE', 'shop');
+define('DB_PREFIX', 'ps_');
 define('DB_DSN', DB_ADAPTER . ':' . 'host=' . DB_SERVER . ';' . 'dbname=' . DB_DATABASE);
 
 /*

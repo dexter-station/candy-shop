@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Nov 08, 2010 at 10:01 AM
+-- Generation Time: Nov 09, 2010 at 07:34 PM
 -- Server version: 5.0.51
 -- PHP Version: 5.2.6-1+lenny4
 
@@ -141,7 +141,7 @@ CREATE TABLE IF NOT EXISTS `ps_products` (
 
 CREATE TABLE IF NOT EXISTS `ps_users` (
   `user_id` int(11) unsigned NOT NULL auto_increment,
-  `users_type_id` int(10) unsigned default NULL,
+  `user_type_id` int(10) unsigned default NULL,
   `register_date` datetime default NULL,
   `sex` enum('male','female') NOT NULL,
   `nick_name` varchar(255) default NULL,
@@ -161,53 +161,35 @@ CREATE TABLE IF NOT EXISTS `ps_users` (
   PRIMARY KEY  (`user_id`),
   UNIQUE KEY `nick` (`nick_name`),
   UNIQUE KEY `email` (`email`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=2 ;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
 
 --
 -- Dumping data for table `ps_users`
 --
 
-INSERT INTO `ps_users` (`user_id`, `users_type_id`, `register_date`, `sex`, `nick_name`, `first_name`, `last_name`, `email`, `country`, `department`, `city`, `post_code`, `adress`, `phone1`, `phone2`, `phone3`, `fax`, `password`) VALUES
+INSERT INTO `ps_users` (`user_id`, `user_type_id`, `register_date`, `sex`, `nick_name`, `first_name`, `last_name`, `email`, `country`, `department`, `city`, `post_code`, `adress`, `phone1`, `phone2`, `phone3`, `fax`, `password`) VALUES
 (0, 0, '2010-11-08 09:54:36', 'male', 'root', 'root', 'root', 'rootemail@example.com', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'rootpass');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `ps_users_rights`
+-- Table structure for table `ps_user_types`
 --
 
-CREATE TABLE IF NOT EXISTS `ps_users_rights` (
-  `right_id` int(10) unsigned NOT NULL auto_increment,
-  `users_type_id` int(10) unsigned NOT NULL,
-  `users/add` enum('0','1') NOT NULL,
-  PRIMARY KEY  (`right_id`),
-  KEY `users_type_id` (`users_type_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=2 ;
-
---
--- Dumping data for table `ps_users_rights`
---
-
-INSERT INTO `ps_users_rights` (`right_id`, `users_type_id`, `users/add`) VALUES
-(1, 0, '1');
-
--- --------------------------------------------------------
-
---
--- Table structure for table `ps_users_types`
---
-
-CREATE TABLE IF NOT EXISTS `ps_users_types` (
-  `users_type_id` int(10) unsigned NOT NULL auto_increment,
+CREATE TABLE IF NOT EXISTS `ps_user_types` (
+  `user_type_id` int(10) unsigned NOT NULL auto_increment,
   `name` varchar(255) default NULL,
-  PRIMARY KEY  (`users_type_id`),
+  `users/add` enum('0','1') NOT NULL,
+  `users/update` enum('0','1') NOT NULL,
+  `users/remove` enum('0','1') NOT NULL,
+  PRIMARY KEY  (`user_type_id`),
   UNIQUE KEY `naem` (`name`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=2 ;
 
 --
--- Dumping data for table `ps_users_types`
+-- Dumping data for table `ps_user_types`
 --
 
-INSERT INTO `ps_users_types` (`users_type_id`, `name`) VALUES
-(1, 'administrator'),
-(0, 'root');
+INSERT INTO `ps_user_types` (`user_type_id`, `name`, `users/add`, `users/update`, `users/remove`) VALUES
+(0, 'root', '0', '0', '0'),
+(1, 'administrator', '0', '0', '0');
