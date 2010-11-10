@@ -4,35 +4,39 @@ class UsersController {
 
     public function index() {
         $title = 'Welcome';
-        $contentPartial = APP_DIR . 'views/products/showall.phtml';
-        require APP_DIR . 'views/layouts/default.phtml';
+        $contentPartial = VIEWS_DIR . 'products/showall.phtml';
+        require TPL_DIR . 'default.phtml';
     }
 
     public function login() {
         if (!isset($_POST['login'])) {
             $title = 'Welcome';
-            $contentPartial = APP_DIR . 'views/products/showall.phtml';
-            require APP_DIR . 'views/layouts/default.phtml';
+            $contentPartial = VIEWS_DIR . 'products/showall.phtml';
+            require TPL_DIR . 'default.phtml';
             return;
         } else {
-            require APP_DIR . 'models/usersModel.php';
+            $identifier = $_POST['identifier'];
+            $password = $_POST['password'];
+
+            require MOD_DIR . 'usersModel.php';
             $usersModel = new UsersModel();
-            if (!$userDetails = $usersModel->isUser()) {
+
+            if (!$userDetails = $usersModel->isUser($identifier, $password)) {
                 $GLOBALS['errors'][] = 'XML ERROR 1 Username';
 
                 $title = 'Welcome';
-                $contentPartial = APP_DIR . 'views/products/showall.phtml';
-                require APP_DIR . 'views/layouts/default.phtml';
+                $contentPartial = VIEWS_DIR . 'products/showall.phtml';
+                require TPL_DIR . 'default.phtml';
                 return;
             } else {
-                require APP_DIR . 'models/userTypesModel.php';
+                require MOD_DIR . 'userTypesModel.php';
                 $userTypesModel = new userTypesModel();
                 $userRights = $userTypesModel->show($userDetails['user_type_id']);
                 $usersModel->setSession($userDetails, $userRights);
 
                 $title = 'Welcome';
-                $contentPartial = APP_DIR . 'views/products/showall.phtml';
-                require APP_DIR . 'views/layouts/default.phtml';
+                $contentPartial = VIEWS_DIR . 'products/showall.phtml';
+                require TPL_DIR . 'default.phtml';
                 return;
             }
         }
@@ -43,8 +47,8 @@ class UsersController {
         unset($_SESSION);
 
         $title = 'Welcome';
-        $contentPartial = APP_DIR . 'views/products/showall.phtml';
-        require APP_DIR . 'views/layouts/default.phtml';
+        $contentPartial = VIEWS_DIR . 'products/showall.phtml';
+        require TPL_DIR . 'default.phtml';
         return;
     }
 

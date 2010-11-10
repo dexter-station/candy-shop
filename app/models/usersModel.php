@@ -8,15 +8,22 @@ class UsersModel {
         $this->table = DB_PREFIX . 'users';
     }
 
-    public function isUser() {
-        $username = Application::$dbConnection->quote(trim($_POST['username']));
-        $password = Application::$dbConnection->quote(trim($_POST['password']));
-        $query = "SELECT * FROM `$this->table` WHERE
-                (`nick_name`=$username AND `password`=$password) OR
-                (`email`=$username AND `password`=$password)
+    public function isUser($identifier, $password) {
+        if ((preg_match(USER_NICK_NAME, $identifier)
+                || preg_match(USER_EMAL, $identifier)
+                ) && preg_match(USER_PASSWORD, $password)
+        ) {
+            $identifier = Application::$dbConnection->quote(trim($identifier));
+            $password = Application::$dbConnection->quote(trim($password));
+            $query = "SELECT * FROM `$this->table` WHERE
+                (`nick_name`=$identifier AND `password`=$password) OR
+                (`email`=$identifier AND `password`=$password)
                 LIMIT 1";
-        
-        return Application::$dbConnection->query($query)->fetch(2);
+
+            return Application::$dbConnection->query($query)->fetch(2);
+        } else {
+            return false;
+        }
     }
 
     public function setSession($userDetails, $userRights) {
